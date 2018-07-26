@@ -11,5 +11,10 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('build a job') {
+      steps {
+        build 'build'
+      }
+    }
   }
 }
