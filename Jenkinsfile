@@ -13,7 +13,7 @@ pipeline {
     }
     stage('build a job') {
       steps {
-        build 'build'
+        build 'testBlueOcean'
       }
     }
   }
