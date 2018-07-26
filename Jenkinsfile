@@ -3,26 +3,31 @@ pipeline {
   stages {
     stage('step1') {
       parallel {
-        stage('step1') {
+        stage('print message') {
           steps {
             echo 'hellow blue ocean'
           }
         }
-        stage('step1-1') {
+        stage('write file') {
           steps {
             writeFile(file: 'work', text: 'build', encoding: 'UTF-8')
           }
         }
-        stage('step1-2') {
-          steps {
-            sleep 5
-          }
-        }
       }
     }
-    stage('step') {
+    stage('shellscript') {
       steps {
-        sh 'ls'
+        sh 'll'
+      }
+    }
+    stage('shellscript(rm)') {
+      steps {
+        sh 'rm -rf work'
+      }
+    }
+    stage('shellscript(ll)') {
+      steps {
+        sh 'll'
       }
     }
   }
