@@ -6,5 +6,10 @@ pipeline {
         echo 'hellow blue ocean'
       }
     }
+    stage('step') {
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
