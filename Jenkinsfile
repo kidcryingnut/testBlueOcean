@@ -17,7 +17,7 @@ pipeline {
     }
     stage('shellscript') {
       steps {
-        sh 'll'
+        sh 'ls'
       }
     }
     stage('shellscript(rm)') {
@@ -27,7 +27,7 @@ pipeline {
     }
     stage('shellscript(ll)') {
       steps {
-        sh 'll'
+        sh 'ls'
       }
     }
   }
